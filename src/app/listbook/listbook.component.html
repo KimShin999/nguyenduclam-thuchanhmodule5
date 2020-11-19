@@ -1,0 +1,18 @@
+<button class="btn btn-danger" (click)="formcreate()">create book</button><br>
+<table class="table table-striped" >
+  <label>Số lượng sách: {{books.length}} </label>
+  <tr>
+    <th>#</th>
+    <th>Tên Sách</th>
+    <th>Tác Giả</th>
+  </tr>
+  <tr *ngFor="let book of books let i =index">
+    <td>{{i+1}}</td>
+    <td>{{book.title}}</td>
+    <td>{{book.author}}</td>
+    <td>
+      <button type="button" class="btn btn-danger" (click)="deletebook(book.id)">Delete</button>
+      <button type="button" class="btn btn-danger" (click)="detailbook(book.id)">update</button>
+    </td>
+  </tr>
+</table>

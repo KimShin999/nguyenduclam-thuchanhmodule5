@@ -1,0 +1,10 @@
+<form>
+  <button class="btn btn-danger" (click)="showlist()">list book</button><br>
+  <label >Tên sách:</label><br>
+  <input type="text" [(ngModel)]="book.title" name="ftitle" ><br>
+  <label >Tác giả:</label><br>
+  <input type="text" [(ngModel)]="book.author" name="fauthor"><br>
+  <label >mô tả về sách: </label><br>
+  <input type="text" [(ngModel)]="book.description" name="fdescription"><br>
+  <input type="button" (click)="createBook()" value="Submit">
+</form>
